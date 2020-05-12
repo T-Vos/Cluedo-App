@@ -1,0 +1,55 @@
+<section class="hero is-medium crime-scene is-bold">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title has-text-white-ter">
+        Cluedo solver
+      </h1>
+      <h2 class="subtitle has-text-grey-lighter">
+        Enhance your Cluedo capabilities
+      </h2>
+    </div>
+  </div>
+</section>
+<br />
+<br />
+<section class="container">
+  <div class="columns">
+    <div class="column">
+      <h3 class="title is-3">Add participants</h3>
+      <div class="field is-grouped">
+        <div class="control is-expanded">
+          <input
+            [(ngModel)]="newUser.userName"
+            class="input"
+            type="text"
+            placeholder="Usermame"
+          />
+        </div>
+        <div class="select">
+          <select [(ngModel)]="newUser.cards">
+            <option value="1">1 card</option>
+            <option value="2">2 cards</option>
+            <option value="3">3 cards</option>
+            <option value="4">4 cards</option>
+            <option value="5">5 cards</option>
+            <option value="6">6 cards</option>
+            <option value="7">7 cards</option>
+            <option value="8">8 cards</option>
+            <option value="9">9 cards</option>
+          </select>
+        </div>
+        <div class="control">
+          <a (click)="add(newUser)" class="button is-light">
+            Add
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="column">
+      <h3 class="title is-3">Participants</h3>
+      <div *ngFor="let user of users" class="box">
+        <strong>{{ user.userName }}</strong>
+      </div>
+    </div>
+  </div>
+</section>
