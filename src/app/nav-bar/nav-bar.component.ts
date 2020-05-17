@@ -25,9 +25,8 @@ import { Component, OnInit } from "@angular/core";
 
         <div id="navbarBasicExample" class="navbar-menu">
           <div class="navbar-start">
-            <a class="navbar-item" routerLink="/dashboard">Dashboard</a>
-            <a class="navbar-item" routerLink="/table">Table</a>
             <a class="navbar-item" routerLink="/input">Input</a>
+            <a class="navbar-item" routerLink="/dashboard">Calculations</a>
           </div>
         </div>
       </div>

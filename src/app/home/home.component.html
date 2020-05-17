@@ -38,6 +38,15 @@
             <option value="9">9 cards</option>
           </select>
         </div>
+        <div class="select">
+          <select [(ngModel)]="newUser.postion">
+            <option value="1">1 (you)</option>
+            <option value="2">2 (person after you)</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
         <div class="control">
           <a (click)="add(newUser)" class="button is-light">
             Add
@@ -47,8 +56,15 @@
     </div>
     <div class="column">
       <h3 class="title is-3">Participants</h3>
+      <div *ngIf="newUser.userName !== ''" class="box">
+        {{ newUser.userName }}
+      </div>
       <div *ngFor="let user of users" class="box">
-        <strong>{{ user.userName }}</strong>
+        <p>
+          {{ user.postion }}. <strong>{{ user.userName }}</strong> has
+          {{ user.cards }} <span *ngIf="user.cards === 1">card</span>
+          <span *ngIf="user.cards !== 1">cards</span>
+        </p>
       </div>
     </div>
   </div>

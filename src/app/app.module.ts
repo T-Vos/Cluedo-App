@@ -8,9 +8,9 @@ import { InputComponent } from "./input/input.component";
 import { NavBarComponent } from "./nav-bar/nav-bar.component";
 import { FooterComponent } from "./footer/footer.component";
 import { HomeComponent } from "./home/home.component";
-import { TableComponent } from "./table/table.component";
+import { TableComponent } from "./input/table/table.component";
 import { DashboardComponent } from "./dashboard/dashboard.component";
-
+// import { _ } from "lodash";
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,6 +26,7 @@ import { DashboardComponent } from "./dashboard/dashboard.component";
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
+    // _,
   ],
   providers: [],
   bootstrap: [AppComponent],

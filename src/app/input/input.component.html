@@ -1,1 +1,70 @@
-<p>input works!</p>
+<div class="container">
+  <div class="columns">
+    <div class="column">
+      <div class="field is-horizontal">
+        <div class="field-label is-normal">
+          <label class="label">Suggestion</label>
+        </div>
+        <div class="field-body">
+          <div class="field">
+            <div class="select">
+              <select [(ngModel)]="newSugestion.userName">
+                <option value="1">1 card</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <div class="select">
+              <select [(ngModel)]="newSugestion.userName">
+                <option value="1">1 card</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <div class="select">
+              <select [(ngModel)]="newSugestion.supspect">
+                <option value="1">Plum</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <div class="select">
+              <select [(ngModel)]="newSugestion.weapon">
+                <option value="1">1 card</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <div class="select">
+              <select [(ngModel)]="newSugestion.room">
+                <option value="1">1 card</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <div class="select">
+              <select [(ngModel)]="newSugestion.refuted_By_User">
+                <option value="1">1 card</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <div class="select">
+              <select [(ngModel)]="newSugestion.refuted_Card">
+                <option value="1">1 card</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <button class="button">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="columns">
+    <div class="column">
+      <app-table></app-table>
+    </div>
+  </div>
+</div>

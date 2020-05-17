@@ -1,4 +1,6 @@
 export interface User {
+  userId: string;
   userName: string;
-  cards: Number;
+  cards: number;
+  postion: number;
 }
