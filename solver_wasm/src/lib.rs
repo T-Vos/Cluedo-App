@@ -1,13 +1,16 @@
 use serde::{Serialize, Deserialize};
 use wasm_bindgen::prelude::*;
+use ts_rs::TS;
 
-#[derive(Deserialize)]
+#[derive(Deserialize, Serialize, TS)]
+#[ts(export)]
 pub struct Enquiry {
     suggesting_player: usize,
     suspect: String,
     weapon: String,
     room: String,
     disproving_player: Option<usize>,
+    disproving_object: Option<String>,
 }
 
 #[derive(Deserialize)]
@@ -24,8 +27,6 @@ pub struct SolverResult {
 #[wasm_bindgen]
 pub fn solve_clue(json_input: &str) -> String {
     let game_state: GameState = serde_json::from_str(json_input).unwrap();
-
-    // CSP logic + simulation
 
     let result = SolverResult {
         deduced_facts: vec!["Green is in the envelope".to_string()],
